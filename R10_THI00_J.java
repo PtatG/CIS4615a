@@ -1,5 +1,5 @@
 // CIS4615 HW2 - Rule 10: THI00-J
-// noncompliant code example
+// compliant solution
 
 public final class Foo implements Runnable {
   @Override public void run() {
@@ -8,6 +8,6 @@ public final class Foo implements Runnable {
 
   public static void main(String[] args) {
     Foo foo = new Foo();
-    new Thread(foo).run();
+    new Thread(foo).start();
   }
 }

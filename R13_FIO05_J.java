@@ -1,5 +1,5 @@
 // CIS4615 HW2 - Rule 13: FIO05-J
-// noncompliant code example
+// compliant solution
 
 final class Wrap {
   private char[] dataArray;
@@ -10,6 +10,6 @@ final class Wrap {
   }
 
   public CharBuffer getBufferCopy() {
-    return CharBuffer.wrap(dataArray);
+    return CharBuffer.wrap(dataArray).asReadOnlyBuffer();
   }
 }

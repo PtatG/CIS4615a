@@ -1,11 +1,10 @@
 // CIS4615 HW2 - Rule 01: DCL00-J
-// noncompliant code example
+// compliant solution
 
 public class Cycle {
   private final int balance;
-  private static final Cycle c = new Cycle();
   private static final int deposit = (int) (Math.random() * 100); // Random deposit
-
+  private static final Cycle c = new Cycle();  // Inserted after initialization of required fields
   public Cycle() {
     balance = deposit - 10; // Subtract processing fee
   }
