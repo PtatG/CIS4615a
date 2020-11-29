@@ -1,0 +1,375 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libfprint-2-tod1
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  fonts-dejavu-extra libatk-wrapper-java libatk-wrapper-java-jni
+  openjdk-11-jre
+The following NEW packages will be installed:
+  default-jre fonts-dejavu-extra libatk-wrapper-java libatk-wrapper-java-jni
+  openjdk-11-jre
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,086 kB of archives.
+After this operation, 7,770 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openjdk-11-jre amd64 11.0.9.1+1-0ubuntu1~20.04 [34.6 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 default-jre amd64 2:1.11-72 [1,084 B]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-extra all 2.37-1 [1,953 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libatk-wrapper-java all 0.37.1-1 [53.0 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libatk-wrapper-java-jni amd64 0.37.1-1 [45.1 kB]
+Fetched 2,086 kB in 2s (1,007 kB/s)
+Selecting previously unselected package openjdk-11-jre:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 195420 files and directories currently installed.)
+Preparing to unpack .../openjdk-11-jre_11.0.9.1+1-0ubuntu1~20.04_amd64.deb ...
+Unpacking openjdk-11-jre:amd64 (11.0.9.1+1-0ubuntu1~20.04) ...
+Selecting previously unselected package default-jre.
+Preparing to unpack .../default-jre_2%3a1.11-72_amd64.deb ...
+Unpacking default-jre (2:1.11-72) ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../fonts-dejavu-extra_2.37-1_all.deb ...
+Unpacking fonts-dejavu-extra (2.37-1) ...
+Selecting previously unselected package libatk-wrapper-java.
+Preparing to unpack .../libatk-wrapper-java_0.37.1-1_all.deb ...
+Unpacking libatk-wrapper-java (0.37.1-1) ...
+Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+Preparing to unpack .../libatk-wrapper-java-jni_0.37.1-1_amd64.deb ...
+Unpacking libatk-wrapper-java-jni:amd64 (0.37.1-1) ...
+Setting up openjdk-11-jre:amd64 (11.0.9.1+1-0ubuntu1~20.04) ...
+Setting up default-jre (2:1.11-72) ...
+Setting up fonts-dejavu-extra (2.37-1) ...
+Setting up libatk-wrapper-java (0.37.1-1) ...
+Setting up libatk-wrapper-java-jni:amd64 (0.37.1-1) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for fontconfig (2.13.1-2ubuntu3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libfprint-2-tod1
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  default-jdk-headless libice-dev libpthread-stubs0-dev libsm-dev libx11-dev
+  libxau-dev libxcb1-dev libxdmcp-dev libxt-dev openjdk-11-jdk
+  openjdk-11-jdk-headless x11proto-core-dev x11proto-dev xorg-sgml-doctools
+  xtrans-dev
+Suggested packages:
+  libice-doc libsm-doc libx11-doc libxcb-doc libxt-doc openjdk-11-demo
+  openjdk-11-source visualvm
+The following NEW packages will be installed:
+  default-jdk default-jdk-headless libice-dev libpthread-stubs0-dev libsm-dev
+  libx11-dev libxau-dev libxcb1-dev libxdmcp-dev libxt-dev openjdk-11-jdk
+  openjdk-11-jdk-headless x11proto-core-dev x11proto-dev xorg-sgml-doctools
+  xtrans-dev
+0 upgraded, 16 newly installed, 0 to remove and 0 not upgraded.
+Need to get 235 MB of archives.
+After this operation, 251 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openjdk-11-jdk-headless amd64 11.0.9.1+1-0ubuntu1~20.04 [232 MB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 default-jdk-headless amd64 2:1.11-72 [1,140 B]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 openjdk-11-jdk amd64 11.0.9.1+1-0ubuntu1~20.04 [1,882 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 default-jdk amd64 2:1.11-72 [1,096 B]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 xorg-sgml-doctools all 1:1.11-1 [12.9 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 x11proto-dev all 2019.2-1ubuntu1 [594 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal/main amd64 x11proto-core-dev all 2019.2-1ubuntu1 [2,620 B]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libice-dev amd64 2:1.0.10-0ubuntu1 [47.8 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5,384 B]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsm-dev amd64 2:1.2.3-1 [17.0 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxau-dev amd64 1:1.0.9-0ubuntu1 [9,552 B]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu1 [25.3 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxcb1-dev amd64 1.14-2 [80.5 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-dev amd64 2:1.6.9-2ubuntu1.1 [649 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxt-dev amd64 1:1.1.5-1 [395 kB]
+Fetched 235 MB in 3min 3s (1,288 kB/s)
+Selecting previously unselected package openjdk-11-jdk-headless:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 195464 files and directories currently installed.)
+Preparing to unpack .../00-openjdk-11-jdk-headless_11.0.9.1+1-0ubuntu1~20.04_amd64.deb ...
+Unpacking openjdk-11-jdk-headless:amd64 (11.0.9.1+1-0ubuntu1~20.04) ...
+Selecting previously unselected package default-jdk-headless.
+Preparing to unpack .../01-default-jdk-headless_2%3a1.11-72_amd64.deb ...
+Unpacking default-jdk-headless (2:1.11-72) ...
+Selecting previously unselected package openjdk-11-jdk:amd64.
+Preparing to unpack .../02-openjdk-11-jdk_11.0.9.1+1-0ubuntu1~20.04_amd64.deb ...
+Unpacking openjdk-11-jdk:amd64 (11.0.9.1+1-0ubuntu1~20.04) ...
+Selecting previously unselected package default-jdk.
+Preparing to unpack .../03-default-jdk_2%3a1.11-72_amd64.deb ...
+Unpacking default-jdk (2:1.11-72) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../04-xorg-sgml-doctools_1%3a1.11-1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../05-x11proto-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package x11proto-core-dev.
+Preparing to unpack .../06-x11proto-core-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-core-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../07-libice-dev_2%3a1.0.10-0ubuntu1_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../08-libpthread-stubs0-dev_0.4-1_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../09-libsm-dev_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../10-libxau-dev_1%3a1.0.9-0ubuntu1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../11-libxdmcp-dev_1%3a1.1.3-0ubuntu1_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../12-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../13-libxcb1-dev_1.14-2_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.14-2) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../14-libx11-dev_2%3a1.6.9-2ubuntu1.1_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.6.9-2ubuntu1.1) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../15-libxt-dev_1%3a1.1.5-1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.1.5-1) ...
+Setting up openjdk-11-jdk-headless:amd64 (11.0.9.1+1-0ubuntu1~20.04) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jaotc to provide /usr/bin/jaotc (jaotc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up libpthread-stubs0-dev:amd64 (0.4-1) ...
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up default-jdk-headless (2:1.11-72) ...
+Setting up openjdk-11-jdk:amd64 (11.0.9.1+1-0ubuntu1~20.04) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+Setting up xorg-sgml-doctools (1:1.11-1) ...
+Setting up default-jdk (2:1.11-72) ...
+Processing triggers for sgml-base (1.29.1) ...
+Setting up x11proto-dev (2019.2-1ubuntu1) ...
+Setting up libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Setting up libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Setting up x11proto-core-dev (2019.2-1ubuntu1) ...
+Setting up libxcb1-dev:amd64 (1.14-2) ...
+Setting up libx11-dev:amd64 (2:1.6.9-2ubuntu1.1) ...
+Setting up libxt-dev:amd64 (1:1.1.5-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+maven is already the newest version (3.6.3-1).
+The following package was automatically installed and is no longer required:
+  libfprint-2-tod1
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.68.0-1ubuntu2.2).
+The following package was automatically installed and is no longer required:
+  libfprint-2-tod1
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+================================================================================
+================================================================================
+
+                              DEPRECATION WARNING                            
+
+  Node.js 13.x is no longer actively supported!
+
+  You will not receive security or critical stability updates for this version.
+
+  You should migrate to a supported version of Node.js as soon as possible.
+  Use the installation script that corresponds to the version of Node.js you
+  wish to install. e.g.
+
+   * https://deb.nodesource.com/setup_10.x — Node.js 10 LTS "Dubnium"
+   * https://deb.nodesource.com/setup_12.x — Node.js 12 LTS "Erbium" (recommended)
+   * https://deb.nodesource.com/setup_14.x — Node.js 14 LTS "Fermium"
+   * https://deb.nodesource.com/setup_15.x — Node.js 15 "Fifteen"
+
+  Please see https://github.com/nodejs/Release for details about which
+  version may be appropriate for you.
+
+  The NodeSource Node.js distributions repository contains
+  information both about supported versions of Node.js and supported Linux
+  distributions. To learn more about usage, see the repository:
+    https://github.com/nodesource/distributions
+
+================================================================================
+================================================================================
+
+Continuing in 20 seconds ...
+
+
+## Installing the NodeSource Node.js 13.x repo...
+
+
+## Populating apt-get cache...
+
++ apt-get update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 https://cli.github.com/packages focal InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
+
+## Confirming "focal" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_13.x/dists/focal/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+OK
+
+## Creating apt sources list file for the NodeSource Node.js 13.x repo...
+
++ echo 'deb https://deb.nodesource.com/node_13.x focal main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node_13.x focal main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:2 https://cli.github.com/packages focal InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:6 https://deb.nodesource.com/node_13.x focal InRelease [4,583 B]
+Get:7 https://deb.nodesource.com/node_13.x focal/main amd64 Packages [767 B]
+Fetched 5,350 B in 1s (4,107 B/s)
+Reading package lists...
+
+## Run `sudo apt-get install -y nodejs` to install Node.js 13.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gyp javascript-common libc-ares2 libfprint-2-tod1 libjs-inherits
+  libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer libssl-dev
+  libuv1-dev node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex
+  node-ansi-styles node-ansistyles node-aproba node-archy
+  node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit
+  node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules
+  node-builtins node-cacache node-call-limit node-camelcase node-caseless
+  node-chalk node-chownr node-ci-info node-cli-boxes node-cliui node-clone
+  node-co node-color-convert node-color-name node-colors node-columnify
+  node-combined-stream node-concat-map node-concat-stream node-config-chain
+  node-configstore node-console-control-strings node-copy-concurrently
+  node-core-util-is node-cross-spawn node-crypto-random-string node-cyclist
+  node-dashdash node-debug node-decamelize node-decompress-response
+  node-deep-extend node-defaults node-define-properties node-delayed-stream
+  node-delegates node-detect-indent node-detect-newline node-dot-prop
+  node-duplexer3 node-duplexify node-ecc-jsbn node-editor node-encoding
+  node-end-of-stream node-err-code node-errno node-es6-promise
+  node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent
+  node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun
+  node-get-caller-file node-get-stream node-getpass node-glob node-got
+  node-graceful-fs node-har-schema node-har-validator node-has-flag
+  node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode
+  node-hosted-git-info node-http-signature node-iconv-lite node-iferr
+  node-import-lazy node-imurmurhash node-inflight node-inherits node-ini
+  node-invert-kv node-ip node-ip-regex node-is-npm node-is-obj node-is-object
+  node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream
+  node-is-typedarray node-isarray node-isexe node-isstream node-isurl
+  node-jsbn node-json-parse-better-errors node-json-schema
+  node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages
+  node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime
+  node-mime-types node-mimic-fn node-mimic-response node-minimatch
+  node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms
+  node-mute-stream node-nopt node-normalize-package-data node-npm-bundled
+  node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan
+  node-oauth-sign node-object-assign node-once node-opener node-os-locale
+  node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise
+  node-p-limit node-p-locate node-p-timeout node-package-json
+  node-parallel-transform node-path-exists node-path-is-absolute
+  node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump
+  node-pumpify node-punycode node-qs node-qw node-rc node-read
+  node-read-package-json node-readable-stream node-registry-auth-token
+  node-registry-url node-request node-require-directory
+  node-require-main-filename node-resolve node-resolve-from node-retry
+  node-rimraf node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slash node-slide node-sorted-object node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids
+  node-sshpk node-ssri node-stream-each node-stream-iterate node-stream-shift
+  node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi
+  node-strip-eof node-strip-json-comments node-supports-color node-tar
+  node-term-size node-text-table node-through node-through2 node-timed-out
+  node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename
+  node-unique-string node-unpipe node-uri-js node-url-parse-lax
+  node-url-to-options node-util-deprecate node-uuid
+  node-validate-npm-package-license node-validate-npm-package-name node-verror
+  node-wcwidth.js node-which node-which-module node-wide-align
+  node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic
+  node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser nodejs-doc python-pkg-resources
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  libnode-dev libnode64 node-gyp npm
+The following packages will be upgraded:
+  nodejs
+1 upgraded, 0 newly installed, 4 to remove and 0 not upgraded.
+Need to get 24.2 MB of archives.
+After this operation, 89.2 MB of additional disk space will be used.
+Get:1 https://deb.nodesource.com/node_13.x focal/main amd64 nodejs amd64 13.14.0-deb-1nodesource1 [24.2 MB]
+Fetched 24.2 MB in 3s (9,509 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 196249 files and directories currently installed.)
+Removing npm (6.14.4+ds-1ubuntu2) ...
+Removing node-gyp (6.1.0-3) ...
+Removing libnode-dev:amd64 (10.19.0~dfsg-3ubuntu1) ...
+dpkg: libnode64:amd64: dependency problems, but removing anyway as you requested:
+ nodejs depends on libnode64 (= 10.19.0~dfsg-3ubuntu1).
+
+Removing libnode64:amd64 (10.19.0~dfsg-3ubuntu1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 194919 files and directories currently installed.)
+Preparing to unpack .../nodejs_13.14.0-deb-1nodesource1_amd64.deb ...
+Unpacking nodejs (13.14.0-deb-1nodesource1) over (10.19.0~dfsg-3ubuntu1) ...
+Setting up nodejs (13.14.0-deb-1nodesource1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+/usr/bin/snyk -> /usr/lib/node_modules/snyk/dist/cli/index.js
++ snyk@1.431.2
+added 445 packages from 330 contributors in 20.181s

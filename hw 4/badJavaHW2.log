@@ -1,0 +1,48 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------------< [0;36mcom.cis4615.app:h4[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding h4 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mh4[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/phillip/h4/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mh4[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/phillip/h4/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mh4[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/phillip/h4/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.984 s
+[[1;34mINFO[m] Finished at: 2020-11-29T06:17:15-05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+NUM03-J: Use integer types that can fully represent the possible range of unsigned data.
+
+Testing /home/phillip...
+
+Could not detect supported target files in /home/phillip.
+Please see our documentation for supported languages and target files: https://support.snyk.io/hc/en-us/articles/360000911957-Language-support and make sure you are in the right directory.
+
+
+Testing /home/phillip...
+
+Organization:      ptatg
+Package manager:   maven
+Target file:       pom.xml
+Project name:      com.cis4615.app:h4
+Open source:       no
+Project path:      /home/phillip
+Licenses:          enabled
+
+✓ Tested /home/phillip for known issues, no vulnerable paths found.
+
+Tip: Detected multiple supported manifests (1), use --all-projects to scan all of them at once.
+
+Next steps:
+- Run `snyk monitor` to be notified about new related vulnerabilities.
+- Run `snyk test` as part of your CI/test.
+
