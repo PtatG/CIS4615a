@@ -1,0 +1,104 @@
+                             //
+                             // segment_0.1 
+                             // Loadable segment  [0x400000 - 0x4000cc] (disabled execute 
+                             // ram:00400000-ram:004000af
+                             //
+             assume DF = 0x0  (Default)
+        00400000 7f 45 4c        Elf64_Ehdr
+                 46 02 01 
+                 01 00 00 
+           00400000 7f              db        7Fh                     e_ident_magi
+           00400001 45 4c 46        ds        "ELF"                   e_ident_magi
+           00400004 02              db        2h                      e_ident_class
+           00400005 01              db        1h                      e_ident_data
+           00400006 01              db        1h                      e_ident_vers
+           00400007 00              db        0h                      e_ident_osabi
+           00400008 00              db        0h                      e_ident_abiv
+           00400009 00 00 00 00 00  db[7]                             e_ident_pad
+                    00 00
+           00400010 02 00           dw        2h                      e_type
+           00400012 3e 00           dw        3Eh                     e_machine
+           00400014 01 00 00 00     ddw       1h                      e_version
+           00400018 b0 00 40 00 00  dq        entry                   e_entry
+                    00 00 00
+           00400020 40 00 00 00 00  dq        Elf64_Phdr_ARRAY_00400  e_phoff       = 
+                    00 00 00
+           00400028 f8 00 00 00 00  dq        Elf64_Shdr_ARRAY__elfS  e_shoff
+                    00 00 00
+           00400030 00 00 00 00     ddw       0h                      e_flags
+           00400034 40 00           dw        40h                     e_ehsize
+           00400036 38 00           dw        38h                     e_phentsize
+           00400038 02 00           dw        2h                      e_phnum
+           0040003a 40 00           dw        40h                     e_shentsize
+           0040003c 04 00           dw        4h                      e_shnum
+           0040003e 03 00           dw        3h                      e_shstrndx
+                             Elf64_Phdr_ARRAY_00400040                       XREF[1]:     00400020(*)  
+        00400040 01 00 00        Elf64_Ph                                                    PT_LOAD - Loadable segment
+                 00 05 00 
+                 00 00 00 
+                             //
+                             // .text 
+                             // SHT_PROGBITS  [0x4000b0 - 0x4000cc]
+                             // ram:004000b0-ram:004000cc
+                             //
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined entry()
+             undefined         AL:1           <RETURN>
+                             entry                                           XREF[3]:     Entry Point(*), 00400018(*), 
+                                                                                          _elfSectionHeaders::00000050(*)  
+        004000b0 ba 10 00        MOV        EDX,0x10
+                 00 00
+        004000b5 b9 d0 00        MOV        ECX,DAT_006000d0                                 = 48h    H
+                 60 00
+        004000ba bb 01 00        MOV        EBX,0x1
+                 00 00
+        004000bf b8 04 00        MOV        EAX,0x4
+                 00 00
+        004000c4 cd 80           INT        0x80
+        004000c6 b8 01 00        MOV        EAX,0x1
+                 00 00
+        004000cb cd 80           INT        0x80
+                             //
+                             // .data 
+                             // SHT_PROGBITS  [0x6000d0 - 0x6000df]
+                             // ram:006000d0-ram:006000df
+                             //
+                             DAT_006000d0                                    XREF[3]:     00400088(*), entry:004000b5(*), 
+                                                                                          _elfSectionHeaders::00000090(*)  
+        006000d0 48              ??         48h    H
+        006000d1 65 6c           INSB       RDI,DX
+        006000d3 6c              INSB       RDI,DX
+        006000d4 6f              OUTSD      DX,RSI
+        006000d5 2c 20           SUB        AL,0x20
+        006000d7 57              PUSH       RDI
+        006000d8 6f              OUTSD      DX,RSI
+        006000d9 72 6c           JC         LAB_00600147
+        006000db 64 21 21        AND        dword ptr FS:[RCX],ESP
+        006000de 21 0a           AND        dword ptr [RDX],ECX
+                             //
+                             // .shstrtab 
+                             // SHT_STRTAB [not-loaded]
+                             // .shstrtab::00000000-.shstrtab::00000016
+                             //
+             assume DF = <UNKNOWN>
+                             DAT_.shstrtab__00000000                         XREF[1]:     _elfSectionHeaders::000000d0(*)  
+     b::00000000 00              ??         00h
+     b::00000001 2e 73 68        ds         ".shstrtab"
+                 73 74 72 
+                 74 61 62 00
+     b::0000000b 2e 74 65        ds         ".text"
+                 78 74 00
+     b::00000011 2e 64 61        ds         ".data"
+                 74 61 00
+                             //
+                             // _elfSectionHeaders 
+                             // Elf Section Headers
+                             // _elfSectionHeaders::00000000-_elfSectionHeaders::000000ff
+                             //
+                             Elf64_Shdr_ARRAY__elfSectionHeaders__00000000   XREF[1]:     00400028(*)  
+     s::00000000 00 00 00        Elf64_Sh                                                    SECTION0 - SHT_NULL
+                 00 00 00 
+                 00 00 00 
+

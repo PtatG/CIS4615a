@@ -1,0 +1,1296 @@
+                             //
+                             // segment_2.1 
+                             // Loadable segment  [0x0 - 0x837] (disabled execute bit)
+                             // ram:00100000-ram:00100237
+                             //
+             assume DF = 0x0  (Default)
+        00100000 7f 45 4c        Elf64_Ehdr
+                 46 02 01 
+                 01 00 00 
+           00100000 7f              db        7Fh                     e_ident_magi
+           00100001 45 4c 46        ds        "ELF"                   e_ident_magi
+           00100004 02              db        2h                      e_ident_class
+           00100005 01              db        1h                      e_ident_data
+           00100006 01              db        1h                      e_ident_vers
+           00100007 00              db        0h                      e_ident_osabi
+           00100008 00              db        0h                      e_ident_abiv
+           00100009 00 00 00 00 00  db[7]                             e_ident_pad
+                    00 00
+           00100010 03 00           dw        3h                      e_type
+           00100012 3e 00           dw        3Eh                     e_machine
+           00100014 01 00 00 00     ddw       1h                      e_version
+           00100018 30 05 00 00 00  dq        _start                  e_entry
+                    00 00 00
+           00100020 40 00 00 00 00  dq        Elf64_Phdr_ARRAY_00100  e_phoff       = 
+                    00 00 00
+           00100028 28 19 00 00 00  dq        Elf64_Shdr_ARRAY__elfS  e_shoff
+                    00 00 00
+           00100030 00 00 00 00     ddw       0h                      e_flags
+           00100034 40 00           dw        40h                     e_ehsize
+           00100036 38 00           dw        38h                     e_phentsize
+           00100038 09 00           dw        9h                      e_phnum
+           0010003a 40 00           dw        40h                     e_shentsize
+           0010003c 1d 00           dw        1Dh                     e_shnum
+           0010003e 1c 00           dw        1Ch                     e_shstrndx
+                             Elf64_Phdr_ARRAY_00100040                       XREF[2]:     00100020(*), 00100050(*)  
+        00100040 06 00 00        Elf64_Ph                                                    PT_PHDR - Program header table
+                 00 04 00 
+                 00 00 40 
+                             //
+                             // .interp 
+                             // SHT_PROGBITS  [0x238 - 0x253]
+                             // ram:00100238-ram:00100253
+                             //
+                             s_/lib64/ld-linux-x86-64.so.2_00100238          XREF[2]:     00100088(*), 
+                                                                                          _elfSectionHeaders::00000050(*)  
+        00100238 2f 6c 69        ds         "/lib64/ld-linux-x86-64.so.2"                    Initial Elf program interpreter
+                 62 36 34 
+                 2f 6c 64 
+                             //
+                             // .note.ABI-tag 
+                             // SHT_NOTE  [0x254 - 0x273]
+                             // ram:00100254-ram:00100273
+                             //
+                             DAT_00100254                                    XREF[2]:     00100168(*), 
+                                                                                          _elfSectionHeaders::00000090(*)  
+        00100254 04              ??         04h
+        00100255 00              ??         00h
+        00100256 00              ??         00h
+        00100257 00              ??         00h
+        00100258 10              ??         10h
+        00100259 00              ??         00h
+        0010025a 00              ??         00h
+        0010025b 00              ??         00h
+        0010025c 01              ??         01h
+        0010025d 00              ??         00h
+        0010025e 00              ??         00h
+        0010025f 00              ??         00h
+        00100260 47              ??         47h    G
+        00100261 4e              ??         4Eh    N
+        00100262 55              ??         55h    U
+        00100263 00              ??         00h
+        00100264 00              ??         00h
+        00100265 00              ??         00h
+        00100266 00              ??         00h
+        00100267 00              ??         00h
+        00100268 03              ??         03h
+        00100269 00              ??         00h
+        0010026a 00              ??         00h
+        0010026b 00              ??         00h
+        0010026c 02              ??         02h
+        0010026d 00              ??         00h
+        0010026e 00              ??         00h
+        0010026f 00              ??         00h
+        00100270 00              ??         00h
+        00100271 00              ??         00h
+        00100272 00              ??         00h
+        00100273 00              ??         00h
+                             //
+                             // .note.gnu.build-id 
+                             // SHT_NOTE  [0x274 - 0x297]
+                             // ram:00100274-ram:00100297
+                             //
+                             DAT_00100274                                    XREF[1]:     _elfSectionHeaders::000000d0(*)  
+        00100274 04              ??         04h
+        00100275 00              ??         00h
+        00100276 00              ??         00h
+        00100277 00              ??         00h
+        00100278 14              ??         14h
+        00100279 00              ??         00h
+        0010027a 00              ??         00h
+        0010027b 00              ??         00h
+        0010027c 03              ??         03h
+        0010027d 00              ??         00h
+        0010027e 00              ??         00h
+        0010027f 00              ??         00h
+        00100280 47              ??         47h    G
+        00100281 4e              ??         4Eh    N
+        00100282 55              ??         55h    U
+        00100283 00              ??         00h
+        00100284 bd              ??         BDh
+        00100285 b3              ??         B3h
+        00100286 2c              ??         2Ch    ,
+        00100287 83              ??         83h
+        00100288 72              ??         72h    r
+        00100289 ec              ??         ECh
+        0010028a cd              ??         CDh
+        0010028b ca              ??         CAh
+        0010028c cb              ??         CBh
+        0010028d 08              ??         08h
+        0010028e 98              ??         98h
+        0010028f 5b              ??         5Bh    [
+        00100290 4d              ??         4Dh    M
+        00100291 ab              ??         ABh
+        00100292 79              ??         79h    y
+        00100293 52              ??         52h    R
+        00100294 d3              ??         D3h
+        00100295 22              ??         22h    "
+        00100296 9b              ??         9Bh
+        00100297 6d              ??         6Dh    m
+                             //
+                             // .gnu.hash 
+                             // SHT_GNU_HASH  [0x298 - 0x2b3]
+                             // ram:00100298-ram:001002b3
+                             //
+                             __DT_GNU_HASH                                   XREF[2]:     00300e40(*), 
+                                                                                          _elfSectionHeaders::00000110(*)  
+        00100298 01 00 00 00     ddw        1h                                               GNU Hash Table - nbucket
+        0010029c 01 00 00 00     ddw        1h                                               GNU Hash Table - symbase
+        001002a0 01 00 00 00     ddw        1h                                               GNU Hash Table - bloom_size
+        001002a4 00 00 00 00     ddw        0h                                               GNU Hash Table - bloom_shift
+        001002a8 00 00 00        dq[1]                                                       GNU Hash Table - bloom
+                 00 00 00 
+                 00 00
+        001002b0 00 00 00 00     ddw[1]                                                      GNU Hash Table - chains
+                             //
+                             // .dynsym 
+                             // SHT_DYNSYM  [0x2b8 - 0x35f]
+                             // ram:001002b8-ram:0010035f
+                             //
+                             __DT_SYMTAB                                     XREF[2]:     00300e60(*), 
+                                                                                          _elfSectionHeaders::00000150(*)  
+        001002b8 00 00 00        Elf64_Sy
+                 00 00 00 
+                 00 00 00 
+                             //
+                             // .dynstr 
+                             // SHT_STRTAB  [0x360 - 0x3e1]
+                             // ram:00100360-ram:001003e1
+                             //
+                             __DT_STRTAB                                     XREF[2]:     00300e50(*), 
+                                                                                          _elfSectionHeaders::00000190(*)  
+        00100360 00              ??         00h
+        00100361 6c 69 62        ds         "libc.so.6"
+                 63 2e 73 
+                 6f 2e 36 00
+        0010036b 70 75 74        ds         "puts"
+                 73 00
+        00100370 5f 5f 63        ds         "__cxa_finalize"
+                 78 61 5f 
+                 66 69 6e 
+        0010037f 5f 5f 6c        ds         "__libc_start_main"
+                 69 62 63 
+                 5f 73 74 
+        00100391 47 4c 49        ds         "GLIBC_2.2.5"
+                 42 43 5f 
+                 32 2e 32 
+        0010039d 5f 49 54        ds         "_ITM_deregisterTMCloneTable"
+                 4d 5f 64 
+                 65 72 65 
+        001003b9 5f 5f 67        ds         "__gmon_start__"
+                 6d 6f 6e 
+                 5f 73 74 
+        001003c8 5f 49 54        ds         "_ITM_registerTMCloneTable"
+                 4d 5f 72 
+                 65 67 69 
+                             //
+                             // .gnu.version 
+                             // SHT_GNU_versym  [0x3e2 - 0x3ef]
+                             // ram:001003e2-ram:001003ef
+                             //
+                             __DT_VERSYM                                     XREF[2]:     00300f50(*), 
+                                                                                          _elfSectionHeaders::000001d0(*)  
+        001003e2 00 00           dw         0h                                               0
+        001003e4 00 00           dw         0h                                               _ITM_deregisterTMCloneTable
+        001003e6 02 00           dw         2h                                               puts
+        001003e8 02 00           dw         2h                                               __libc_start_main
+        001003ea 00 00           dw         0h                                               __gmon_start__
+        001003ec 00 00           dw         0h                                               _ITM_registerTMCloneTable
+        001003ee 02 00           dw         2h                                               __cxa_finalize
+                             //
+                             // .gnu.version_r 
+                             // SHT_GNU_verneed  [0x3f0 - 0x40f]
+                             // ram:001003f0-ram:0010040f
+                             //
+                             __DT_VERNEED                                    XREF[2]:     00300f30(*), 
+                                                                                          _elfSectionHeaders::00000210(*)  
+        001003f0 01              ??         01h
+        001003f1 00              ??         00h
+        001003f2 01              ??         01h
+        001003f3 00              ??         00h
+        001003f4 01              ??         01h
+        001003f5 00              ??         00h
+        001003f6 00              ??         00h                                              ?  ->  00100000
+        001003f7 00              ??         00h
+        001003f8 10              ??         10h
+        001003f9 00              ??         00h
+        001003fa 00              ??         00h
+        001003fb 00              ??         00h
+        001003fc 00              ??         00h
+        001003fd 00              ??         00h
+        001003fe 00              ??         00h
+        001003ff 00              ??         00h
+        00100400 75              ??         75h    u
+        00100401 1a              ??         1Ah
+        00100402 69              ??         69h    i
+        00100403 09              ??         09h
+        00100404 00              ??         00h
+        00100405 00              ??         00h
+        00100406 02              ??         02h
+        00100407 00              ??         00h
+        00100408 31              ??         31h    1
+        00100409 00              ??         00h
+        0010040a 00              ??         00h
+        0010040b 00              ??         00h
+        0010040c 00              ??         00h
+        0010040d 00              ??         00h
+        0010040e 00              ??         00h
+        0010040f 00              ??         00h
+                             //
+                             // .rela.dyn 
+                             // SHT_RELA  [0x410 - 0x4cf]
+                             // ram:00100410-ram:001004cf
+                             //
+                             __DT_RELA                                       XREF[2]:     00300ee0(*), 
+                                                                                          _elfSectionHeaders::00000250(*)  
+        00100410 b8 0d 20        Elf64_Re                                                    location to apply the relocation
+                 00 00 00 
+                 00 00 08 
+                             //
+                             // .rela.plt 
+                             // SHT_RELA  [0x4d0 - 0x4e7]
+                             // ram:001004d0-ram:001004e7
+                             //
+                             __DT_JMPREL                                     XREF[2]:     00300ed0(*), 
+                                                                                          _elfSectionHeaders::00000290(*)  
+        001004d0 d0 0f 20        Elf64_Re                                                    location to apply the relocation
+                 00 00 00 
+                 00 00 07 
+                             //
+                             // .init 
+                             // SHT_PROGBITS  [0x4e8 - 0x4fe]
+                             // ram:001004e8-ram:001004fe
+                             //
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             int __stdcall _init(EVP_PKEY_CTX * ctx)
+             int               EAX:4          <RETURN>
+             EVP_PKEY_CTX *    RDI:8          ctx
+                             __DT_INIT                                       XREF[4]:     Entry Point(*), 
+                             _init                                                        __libc_csu_init:0010068c(c), 
+                                                                                          00300de0(*), 
+                                                                                          _elfSectionHeaders::000002d0(*)  
+        001004e8 48 83 ec 08     SUB        RSP,0x8
+        001004ec 48 8b 05        MOV        RAX=>__gmon_start__,qword ptr [->__gmon_start__] = 00302018
+                 f5 0a 20 00                                                                 = ??
+        001004f3 48 85 c0        TEST       RAX,RAX
+        001004f6 74 02           JZ         LAB_001004fa
+        001004f8 ff d0           CALL       RAX=>__gmon_start__                              undefined __gmon_start__()
+                             LAB_001004fa                                    XREF[1]:     001004f6(j)  
+        001004fa 48 83 c4 08     ADD        RSP,0x8
+        001004fe c3              RET
+                             //
+                             // .plt 
+                             // SHT_PROGBITS  [0x500 - 0x51f]
+                             // ram:00100500-ram:0010051f
+                             //
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined FUN_00100500()
+             undefined         AL:1           <RETURN>
+                             FUN_00100500                                    XREF[4]:     0010051b(c), 00100700, 
+                                                                                          00100780(*), 
+                                                                                          _elfSectionHeaders::00000310(*)  
+        00100500 ff 35 ba        PUSH       qword ptr [PTR_00300fc0]                         = 00000000
+                 0a 20 00
+        00100506 ff 25 bc        JMP        qword ptr [PTR_00300fc8]
+                 0a 20 00
+        0010050c 0f              ??         0Fh
+        0010050d 1f              ??         1Fh
+        0010050e 40              ??         40h    @
+        0010050f 00              ??         00h
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk int puts(char * __s)
+                               Thunked-Function: puts
+             int               EAX:4          <RETURN>
+             char *            RDI:8          __s
+                             puts                                            XREF[1]:     main:00100645(c)  
+        00100510 ff 25 ba        JMP        qword ptr [->puts]                               int puts(char * __s)
+                 0a 20 00
+                             -- Flow Override: CALL_RETURN (COMPUTED_CALL_TERMINATOR)
+        00100516 68 00 00        PUSH       0x0
+                 00 00
+        0010051b e9 e0 ff        JMP        FUN_00100500                                     undefined FUN_00100500()
+                 ff ff
+                             -- Flow Override: CALL_RETURN (CALL_TERMINATOR)
+                             //
+                             // .plt.got 
+                             // SHT_PROGBITS  [0x520 - 0x527]
+                             // ram:00100520-ram:00100527
+                             //
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk undefined __cxa_finalize()
+                               Thunked-Function: __cxa_finalize
+             undefined         AL:1           <RETURN>
+                             __cxa_finalize                                  XREF[4]:     __do_global_dtors_aux:0010060e(c
+                                                                                          00100708, 001007a8(*), 
+                                                                                          _elfSectionHeaders::00000350(*)  
+        00100520 ff 25 d2        JMP        qword ptr [->__cxa_finalize]                     undefined __cxa_finalize()
+                 0a 20 00
+                             -- Flow Override: CALL_RETURN (COMPUTED_CALL_TERMINATOR)
+        00100526 66              ??         66h    f
+        00100527 90              ??         90h
+                             //
+                             // .text 
+                             // SHT_PROGBITS  [0x530 - 0x6d1]
+                             // ram:00100530-ram:001006d1
+                             //
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined _start()
+             undefined         AL:1           <RETURN>
+             undefined8        Stack[-0x10]:8 local_10                                XREF[1]:     0010053e(*)  
+                             _start                                          XREF[5]:     Entry Point(*), 00100018(*), 
+                                                                                          00100710, 00100750(*), 
+                                                                                          _elfSectionHeaders::00000390(*)  
+        00100530 31 ed           XOR        EBP,EBP
+        00100532 49 89 d1        MOV        R9,RDX
+        00100535 5e              POP        RSI
+        00100536 48 89 e2        MOV        RDX,RSP
+        00100539 48 83 e4 f0     AND        RSP,-0x10
+        0010053d 50              PUSH       RAX
+        0010053e 54              PUSH       RSP=>local_10
+        0010053f 4c 8d 05        LEA        R8,[__libc_csu_fini]
+                 8a 01 00 00
+        00100546 48 8d 0d        LEA        RCX,[__libc_csu_init]
+                 13 01 00 00
+        0010054d 48 8d 3d        LEA        RDI,[main]
+                 e6 00 00 00
+        00100554 ff 15 86        CALL       qword ptr [->__libc_start_main]                  undefined __libc_start_main()
+                 0a 20 00
+        0010055a f4              HLT
+        0010055b 0f              ??         0Fh
+        0010055c 1f              ??         1Fh
+        0010055d 44              ??         44h    D
+        0010055e 00              ??         00h
+        0010055f 00              ??         00h
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined deregister_tm_clones()
+             undefined         AL:1           <RETURN>
+                             deregister_tm_clones                            XREF[1]:     __do_global_dtors_aux:00100613(c
+        00100560 48 8d 3d        LEA        RDI,[completed.7697]                             = ??
+                 a9 0a 20 00
+        00100567 55              PUSH       RBP
+        00100568 48 8d 05        LEA        RAX,[completed.7697]                             = ??
+                 a1 0a 20 00
+        0010056f 48 39 f8        CMP        RAX,RDI
+        00100572 48 89 e5        MOV        RBP,RSP
+        00100575 74 19           JZ         LAB_00100590
+        00100577 48 8b 05        MOV        RAX=>_ITM_deregisterTMCloneTable,qword ptr [->   = 00302000
+                 5a 0a 20 00                                                                 = ??
+        0010057e 48 85 c0        TEST       RAX,RAX
+        00100581 74 0d           JZ         LAB_00100590
+        00100583 5d              POP        RBP
+        00100584 ff e0           JMP        RAX=>_ITM_deregisterTMCloneTable                 undefined _ITM_deregisterTMClone
+                             -- Flow Override: CALL_RETURN (COMPUTED_CALL_TERMINATOR)
+        00100586 66              ??         66h    f
+        00100587 2e              ??         2Eh    .
+        00100588 0f              ??         0Fh
+        00100589 1f              ??         1Fh
+        0010058a 84              ??         84h
+        0010058b 00              ??         00h
+        0010058c 00              ??         00h
+        0010058d 00              ??         00h
+        0010058e 00              ??         00h
+        0010058f 00              ??         00h
+                             LAB_00100590                                    XREF[2]:     00100575(j), 00100581(j)  
+        00100590 5d              POP        RBP
+        00100591 c3              RET
+        00100592 0f              ??         0Fh
+        00100593 1f              ??         1Fh
+        00100594 40              ??         40h    @
+        00100595 00              ??         00h
+        00100596 66              ??         66h    f
+        00100597 2e              ??         2Eh    .
+        00100598 0f              ??         0Fh
+        00100599 1f              ??         1Fh
+        0010059a 84              ??         84h
+        0010059b 00              ??         00h
+        0010059c 00              ??         00h
+        0010059d 00              ??         00h
+        0010059e 00              ??         00h
+        0010059f 00              ??         00h
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined register_tm_clones()
+             undefined         AL:1           <RETURN>
+                             register_tm_clones                              XREF[1]:     frame_dummy:00100635(c)  
+        001005a0 48 8d 3d        LEA        RDI,[completed.7697]                             = ??
+                 69 0a 20 00
+        001005a7 48 8d 35        LEA        RSI,[completed.7697]                             = ??
+                 62 0a 20 00
+        001005ae 55              PUSH       RBP
+        001005af 48 29 fe        SUB        RSI,RDI
+        001005b2 48 89 e5        MOV        RBP,RSP
+        001005b5 48 c1 fe 03     SAR        RSI,0x3
+        001005b9 48 89 f0        MOV        RAX,RSI
+        001005bc 48 c1 e8 3f     SHR        RAX,0x3f
+        001005c0 48 01 c6        ADD        RSI,RAX
+        001005c3 48 d1 fe        SAR        RSI,1
+        001005c6 74 18           JZ         LAB_001005e0
+        001005c8 48 8b 05        MOV        RAX=>_ITM_registerTMCloneTable,qword ptr [->_I   = 00302020
+                 21 0a 20 00                                                                 = ??
+        001005cf 48 85 c0        TEST       RAX,RAX
+        001005d2 74 0c           JZ         LAB_001005e0
+        001005d4 5d              POP        RBP
+        001005d5 ff e0           JMP        RAX=>_ITM_registerTMCloneTable                   undefined _ITM_registerTMCloneTa
+                             -- Flow Override: CALL_RETURN (COMPUTED_CALL_TERMINATOR)
+        001005d7 66              ??         66h    f
+        001005d8 0f              ??         0Fh
+        001005d9 1f              ??         1Fh
+        001005da 84              ??         84h
+        001005db 00              ??         00h
+        001005dc 00              ??         00h
+        001005dd 00              ??         00h
+        001005de 00              ??         00h
+        001005df 00              ??         00h
+                             LAB_001005e0                                    XREF[2]:     001005c6(j), 001005d2(j)  
+        001005e0 5d              POP        RBP
+        001005e1 c3              RET
+        001005e2 0f              ??         0Fh
+        001005e3 1f              ??         1Fh
+        001005e4 40              ??         40h    @
+        001005e5 00              ??         00h
+        001005e6 66              ??         66h    f
+        001005e7 2e              ??         2Eh    .
+        001005e8 0f              ??         0Fh
+        001005e9 1f              ??         1Fh
+        001005ea 84              ??         84h
+        001005eb 00              ??         00h
+        001005ec 00              ??         00h
+        001005ed 00              ??         00h
+        001005ee 00              ??         00h
+        001005ef 00              ??         00h
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined __do_global_dtors_aux()
+             undefined         AL:1           <RETURN>
+                             __do_global_dtors_aux                           XREF[1]:     __libc_csu_init:001006a9(c)  
+        001005f0 80 3d 19        CMP        byte ptr [completed.7697],0x0                    = ??
+                 0a 20 00 00
+        001005f7 75 2f           JNZ        LAB_00100628
+        001005f9 48 83 3d        CMP        qword ptr [->__cxa_finalize],0x0                 = 00302028
+                 f7 09 20 
+                 00 00
+        00100601 55              PUSH       RBP
+        00100602 48 89 e5        MOV        RBP,RSP
+        00100605 74 0c           JZ         LAB_00100613
+        00100607 48 8b 3d        MOV        RDI,qword ptr [->__dso_handle]                   = 00301008
+                 fa 09 20 00
+        0010060e e8 0d ff        CALL       __cxa_finalize                                   undefined __cxa_finalize()
+                 ff ff
+                             LAB_00100613                                    XREF[1]:     00100605(j)  
+        00100613 e8 48 ff        CALL       deregister_tm_clones                             undefined deregister_tm_clones()
+                 ff ff
+        00100618 c6 05 f1        MOV        byte ptr [completed.7697],0x1                    = ??
+                 09 20 00 01
+        0010061f 5d              POP        RBP
+        00100620 c3              RET
+        00100621 0f              ??         0Fh
+        00100622 1f              ??         1Fh
+        00100623 80              ??         80h
+        00100624 00              ??         00h
+        00100625 00              ??         00h
+        00100626 00              ??         00h
+        00100627 00              ??         00h
+                             LAB_00100628                                    XREF[1]:     001005f7(j)  
+        00100628 f3 c3           RET
+        0010062a 66              ??         66h    f
+        0010062b 0f              ??         0Fh
+        0010062c 1f              ??         1Fh
+        0010062d 44              ??         44h    D
+        0010062e 00              ??         00h
+        0010062f 00              ??         00h
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined frame_dummy()
+             undefined         AL:1           <RETURN>
+                             frame_dummy                                     XREF[1]:     __libc_csu_init:001006a9(c)  
+        00100630 55              PUSH       RBP
+        00100631 48 89 e5        MOV        RBP,RSP
+        00100634 5d              POP        RBP
+        00100635 e9 66 ff        JMP        register_tm_clones                               undefined register_tm_clones()
+                 ff ff
+                             -- Flow Override: CALL_RETURN (CALL_TERMINATOR)
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined main()
+             undefined         AL:1           <RETURN>
+                             main                                            XREF[4]:     Entry Point(*), 
+                                                                                          _start:0010054d(*), 00100718, 
+                                                                                          001007c0(*)  
+        0010063a 55              PUSH       RBP
+        0010063b 48 89 e5        MOV        RBP,RSP
+        0010063e 48 8d 3d        LEA        RDI,[s_hello,_world!_001006e4]                   = "hello, world!"
+                 9f 00 00 00
+        00100645 e8 c6 fe        CALL       puts                                             int puts(char * __s)
+                 ff ff
+        0010064a b8 00 00        MOV        EAX,0x0
+                 00 00
+        0010064f 5d              POP        RBP
+        00100650 c3              RET
+        00100651 66              ??         66h    f
+        00100652 2e              ??         2Eh    .
+        00100653 0f              ??         0Fh
+        00100654 1f              ??         1Fh
+        00100655 84              ??         84h
+        00100656 00              ??         00h
+        00100657 00              ??         00h
+        00100658 00              ??         00h
+        00100659 00              ??         00h
+        0010065a 00              ??         00h
+        0010065b 0f              ??         0Fh
+        0010065c 1f              ??         1Fh
+        0010065d 44              ??         44h    D
+        0010065e 00              ??         00h
+        0010065f 00              ??         00h
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined __libc_csu_init()
+             undefined         AL:1           <RETURN>
+                             __libc_csu_init                                 XREF[4]:     Entry Point(*), 
+                                                                                          _start:00100546(*), 00100720, 
+                                                                                          001007e0(*)  
+        00100660 41 57           PUSH       R15
+        00100662 41 56           PUSH       R14
+        00100664 49 89 d7        MOV        R15,RDX
+        00100667 41 55           PUSH       R13
+        00100669 41 54           PUSH       R12
+        0010066b 4c 8d 25        LEA        R12,[__frame_dummy_init_array_entry]             = 100630h
+                 46 07 20 00
+        00100672 55              PUSH       RBP
+        00100673 48 8d 2d        LEA        RBP,[__do_global_dtors_aux_fini_array_entry]     = 1005F0h
+                 46 07 20 00
+        0010067a 53              PUSH       RBX
+        0010067b 41 89 fd        MOV        R13D,EDI
+        0010067e 49 89 f6        MOV        R14,RSI
+        00100681 4c 29 e5        SUB        RBP,R12
+        00100684 48 83 ec 08     SUB        RSP,0x8
+        00100688 48 c1 fd 03     SAR        RBP,0x3
+        0010068c e8 57 fe        CALL       _init                                            int _init(EVP_PKEY_CTX * ctx)
+                 ff ff
+        00100691 48 85 ed        TEST       RBP,RBP
+        00100694 74 20           JZ         LAB_001006b6
+        00100696 31 db           XOR        EBX,EBX
+        00100698 0f 1f 84        NOP        dword ptr [RAX + RAX*0x1]
+                 00 00 00 
+                 00 00
+                             LAB_001006a0                                    XREF[1]:     001006b4(j)  
+        001006a0 4c 89 fa        MOV        RDX,R15
+        001006a3 4c 89 f6        MOV        RSI,R14
+        001006a6 44 89 ef        MOV        EDI,R13D
+        001006a9 41 ff 14 dc     CALL       qword ptr [R12 + RBX*0x8]=>__frame_dummy_init_   undefined frame_dummy()
+                                                                                             = 100630h
+                                                                                             = 1005F0h
+                                                                                             undefined __do_global_dtors_aux()
+        001006ad 48 83 c3 01     ADD        RBX,0x1
+        001006b1 48 39 dd        CMP        RBP,RBX
+        001006b4 75 ea           JNZ        LAB_001006a0
+                             LAB_001006b6                                    XREF[1]:     00100694(j)  
+        001006b6 48 83 c4 08     ADD        RSP,0x8
+        001006ba 5b              POP        RBX
+        001006bb 5d              POP        RBP
+        001006bc 41 5c           POP        R12
+        001006be 41 5d           POP        R13
+        001006c0 41 5e           POP        R14
+        001006c2 41 5f           POP        R15
+        001006c4 c3              RET
+        001006c5 90              ??         90h
+        001006c6 66              ??         66h    f
+        001006c7 2e              ??         2Eh    .
+        001006c8 0f              ??         0Fh
+        001006c9 1f              ??         1Fh
+        001006ca 84              ??         84h
+        001006cb 00              ??         00h
+        001006cc 00              ??         00h
+        001006cd 00              ??         00h
+        001006ce 00              ??         00h
+        001006cf 00              ??         00h
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined __libc_csu_fini()
+             undefined         AL:1           <RETURN>
+                             __libc_csu_fini                                 XREF[4]:     Entry Point(*), 
+                                                                                          _start:0010053f(*), 00100728, 
+                                                                                          00100828(*)  
+        001006d0 f3 c3           RET
+                             //
+                             // .fini 
+                             // SHT_PROGBITS  [0x6d4 - 0x6dc]
+                             // ram:001006d4-ram:001006dc
+                             //
+                             **************************************************************
+                             *                          FUNCTION                          *
+                             **************************************************************
+                             undefined _fini()
+             undefined         AL:1           <RETURN>
+                             __DT_FINI                                       XREF[3]:     Entry Point(*), 00300df0(*), 
+                             _fini                                                        _elfSectionHeaders::000003d0(*)  
+        001006d4 48 83 ec 08     SUB        RSP,0x8
+        001006d8 48 83 c4 08     ADD        RSP,0x8
+        001006dc c3              RET
+                             //
+                             // .rodata 
+                             // SHT_PROGBITS  [0x6e0 - 0x6f1]
+                             // ram:001006e0-ram:001006f1
+                             //
+                             _IO_stdin_used                                  XREF[2]:     Entry Point(*), 
+                                                                                          _elfSectionHeaders::00000410(*)  
+        001006e0 01 00 02 00     undefined4 00020001h
+                             s_hello,_world!_001006e4                        XREF[1]:     main:0010063e(*)  
+        001006e4 68 65 6c        ds         "hello, world!"
+                 6c 6f 2c 
+                 20 77 6f 
+                             //
+                             // .eh_frame_hdr 
+                             // SHT_PROGBITS  [0x6f4 - 0x72f]
+                             // ram:001006f4-ram:0010072f
+                             //
+                             **************************************************************
+                             * Exception Handler Frame Header                             *
+                             **************************************************************
+                             __GNU_EH_FRAME_HDR                              XREF[2]:     001001a0(*), 
+                                                                                          _elfSectionHeaders::00000450(*)  
+        001006f4 01 1b 03 3b     eh_frame                                                    Exception Handler Frame Header V
+        001006f8 38 00 00 00     ddw        cie_00100730                                     Encoded eh_frame_ptr
+        001006fc 06 00 00 00     ddw        6h                                               Encoded FDE count
+                             **************************************************************
+                             * Frame Description Entry Table                              *
+                             **************************************************************
+        00100700 0c fe ff        fde_tabl                                                    Initial Location
+                 ff 84 00 
+                 00 00
+        00100708 2c fe ff        fde_tabl                                                    Initial Location
+                 ff ac 00 
+                 00 00
+        00100710 3c fe ff        fde_tabl                                                    Initial Location
+                 ff 54 00 
+                 00 00
+        00100718 46 ff ff        fde_tabl                                                    Initial Location
+                 ff c4 00 
+                 00 00
+        00100720 6c ff ff        fde_tabl                                                    Initial Location
+                 ff e4 00 
+                 00 00
+        00100728 dc ff ff        fde_tabl                                                    Initial Location
+                 ff 2c 01 
+                 00 00
+                             //
+                             // .eh_frame 
+                             // SHT_PROGBITS  [0x730 - 0x837]
+                             // ram:00100730-ram:00100837
+                             //
+                             **************************************************************
+                             * Common Information Entry                                   *
+                             **************************************************************
+                             cie_00100730                                    XREF[3]:     001006f8(*), 0010074c(*), 
+                                                                                          _elfSectionHeaders::00000490(*)  
+        00100730 14 00 00 00     ddw        14h                                              (CIE) Length
+        00100734 00 00 00 00     ddw        0h                                               (CIE) ID
+        00100738 01              db         1h                                               (CIE) Version
+        00100739 7a 52 00        ds         "zR"                                             (CIE) Augmentation String
+        0010073c 01              uleb128    1h                                               (CIE) Code Alignment
+        0010073d 78              sleb128    -8h                                              (CIE) Data Alignment
+        0010073e 10              db         10h                                              (CIE) Return Address Register Co
+        0010073f 01              uleb128    1h                                               (CIE) Augmentation Data Length
+        00100740 1b              dwfenc     DW_EH_PE_sdata4 | DW_EH_PE_pcrel                 (CIE Augmentation Data) FDE Enco
+        00100741 0c 07 08        db[7]                                                       (CIE) Initial Instructions
+                 90 01 07 10
+                             **************************************************************
+                             * Frame Descriptor Entry                                     *
+                             **************************************************************
+                             fde_00100748                                    XREF[1]:     00100714(*)  
+        00100748 14 00 00 00     ddw        14h                                              (FDE) Length
+        0010074c 1c 00 00 00     ddw        cie_00100730                                     (FDE) CIE Reference Pointer 
+        00100750 e0 fd ff ff     ddw        _start                                           (FDE) PcBegin
+        00100754 2b 00 00        dq         2Bh                                              (FDE) PcRange
+                 00 00 00 
+                 00 00
+        0010075c 00              uleb128    0h                                               (FDE) Augmentation Data Length
+        0010075d 00 00 00        db[3]                                                       (FDE) Call Frame Instructions
+                             **************************************************************
+                             * Common Information Entry                                   *
+                             **************************************************************
+                             cie_00100760                                    XREF[5]:     0010077c(*), 001007a4(*), 
+                                                                                          001007bc(*), 001007dc(*), 
+                                                                                          00100824(*)  
+        00100760 14 00 00 00     ddw        14h                                              (CIE) Length
+        00100764 00 00 00 00     ddw        0h                                               (CIE) ID
+        00100768 01              db         1h                                               (CIE) Version
+        00100769 7a 52 00        ds         "zR"                                             (CIE) Augmentation String
+        0010076c 01              uleb128    1h                                               (CIE) Code Alignment
+        0010076d 78              sleb128    -8h                                              (CIE) Data Alignment
+        0010076e 10              db         10h                                              (CIE) Return Address Register Co
+        0010076f 01              uleb128    1h                                               (CIE) Augmentation Data Length
+        00100770 1b              dwfenc     DW_EH_PE_sdata4 | DW_EH_PE_pcrel                 (CIE Augmentation Data) FDE Enco
+        00100771 0c 07 08        db[7]                                                       (CIE) Initial Instructions
+                 90 01 00 00
+                             **************************************************************
+                             * Frame Descriptor Entry                                     *
+                             **************************************************************
+                             fde_00100778                                    XREF[1]:     00100704(*)  
+        00100778 24 00 00 00     ddw        24h                                              (FDE) Length
+        0010077c 1c 00 00 00     ddw        cie_00100760                                     (FDE) CIE Reference Pointer 
+        00100780 80 fd ff ff     ddw        FUN_00100500                                     (FDE) PcBegin
+        00100784 20 00 00 00     ddw        20h                                              (FDE) PcRange
+        00100788 00              uleb128    0h                                               (FDE) Augmentation Data Length
+        00100789 0e 10 46        db[23]                                                      (FDE) Call Frame Instructions
+                 0e 18 4a 
+                 0f 0b 77 
+                             **************************************************************
+                             * Frame Descriptor Entry                                     *
+                             **************************************************************
+                             fde_001007a0                                    XREF[1]:     0010070c(*)  
+        001007a0 14 00 00 00     ddw        14h                                              (FDE) Length
+        001007a4 44 00 00 00     ddw        cie_00100760                                     (FDE) CIE Reference Pointer 
+        001007a8 78 fd ff ff     ddw        __cxa_finalize                                   (FDE) PcBegin
+        001007ac 08 00 00        dq         8h                                               (FDE) PcRange
+                 00 00 00 
+                 00 00
+        001007b4 00              uleb128    0h                                               (FDE) Augmentation Data Length
+        001007b5 00 00 00        db[3]                                                       (FDE) Call Frame Instructions
+                             **************************************************************
+                             * Frame Descriptor Entry                                     *
+                             **************************************************************
+                             fde_001007b8                                    XREF[1]:     0010071c(*)  
+        001007b8 1c 00 00 00     ddw        1Ch                                              (FDE) Length
+        001007bc 5c 00 00 00     ddw        cie_00100760                                     (FDE) CIE Reference Pointer 
+        001007c0 7a fe ff ff     ddw        main                                             (FDE) PcBegin
+        001007c4 17 00 00 00     ddw        17h                                              (FDE) PcRange
+        001007c8 00              uleb128    0h                                               (FDE) Augmentation Data Length
+        001007c9 41 0e 10        db[15]                                                      (FDE) Call Frame Instructions
+                 86 02 43 
+                 0d 06 52 
+                             **************************************************************
+                             * Frame Descriptor Entry                                     *
+                             **************************************************************
+                             fde_001007d8                                    XREF[1]:     00100724(*)  
+        001007d8 44 00 00 00     ddw        44h                                              (FDE) Length
+        001007dc 7c 00 00 00     ddw        cie_00100760                                     (FDE) CIE Reference Pointer 
+        001007e0 80 fe ff ff     ddw        __libc_csu_init                                  (FDE) PcBegin
+        001007e4 65 00 00 00     ddw        65h                                              (FDE) PcRange
+        001007e8 00              uleb128    0h                                               (FDE) Augmentation Data Length
+        001007e9 42 0e 10        db[55]                                                      (FDE) Call Frame Instructions
+                 8f 02 42 
+                 0e 18 8e 
+                             **************************************************************
+                             * Frame Descriptor Entry                                     *
+                             **************************************************************
+                             fde_00100820                                    XREF[1]:     0010072c(*)  
+        00100820 10 00 00 00     ddw        10h                                              (FDE) Length
+        00100824 c4 00 00 00     ddw        cie_00100760                                     (FDE) CIE Reference Pointer 
+        00100828 a8 fe ff ff     ddw        __libc_csu_fini                                  (FDE) PcBegin
+        0010082c 02 00 00        dq         2h                                               (FDE) PcRange
+                 00 00 00 
+                 00 00
+                             **************************************************************
+                             * END OF FRAME                                               *
+                             **************************************************************
+                             __FRAME_END__
+        00100834 00 00 00 00     ddw        0h                                               End of Frame
+                             //
+                             // .init_array 
+                             // SHT_INIT_ARRAY  [0x200db8 - 0x200dbf]
+                             // ram:00300db8-ram:00300dbf
+                             //
+                             __DT_INIT_ARRAY                                 XREF[6]:     001000f8(*), 00100210(*), 
+                             __init_array_start                                           __libc_csu_init:0010066b(*), 
+                             __frame_dummy_init_array_entry                               __libc_csu_init:001006a9(R), 
+                                                                                          00300e00(*), 
+                                                                                          _elfSectionHeaders::000004d0(*)  
+        00300db8 30 06 10        dq         DAT_00200630
+                 00 00 00 
+                 00 00
+                             //
+                             // .fini_array 
+                             // SHT_FINI_ARRAY  [0x200dc0 - 0x200dc7]
+                             // ram:00300dc0-ram:00300dc7
+                             //
+                             __DT_FINI_ARRAY                                 XREF[4]:     __libc_csu_init:00100673(*), 
+                             __init_array_end                                             __libc_csu_init:001006a9(R), 
+                             __do_global_dtors_aux_fini_array_entry                       00300e20(*), 
+                                                                                          _elfSectionHeaders::00000510(*)  
+        00300dc0 f0 05 10        dq         DAT_002005f0
+                 00 00 00 
+                 00 00
+                             //
+                             // .dynamic 
+                             // SHT_DYNAMIC  [0x200dc8 - 0x200fb7]
+                             // ram:00300dc8-ram:00300fb7
+                             //
+                             _DYNAMIC                                        XREF[2]:     00100130(*), 
+                                                                                          _elfSectionHeaders::00000550(*)  
+        00300dc8 01 00 00        Elf64_Dy                                                    DT_NEEDED - Name of needed library
+                 00 00 00 
+                 00 00 01 
+        00300f78 00              ??         00h
+        00300f79 00              ??         00h
+        00300f7a 00              ??         00h
+        00300f7b 00              ??         00h
+        00300f7c 00              ??         00h
+        00300f7d 00              ??         00h
+        00300f7e 00              ??         00h
+        00300f7f 00              ??         00h
+        00300f80 00              ??         00h
+        00300f81 00              ??         00h
+        00300f82 00              ??         00h
+        00300f83 00              ??         00h
+        00300f84 00              ??         00h
+        00300f85 00              ??         00h
+        00300f86 00              ??         00h
+        00300f87 00              ??         00h
+        00300f88 00              ??         00h
+        00300f89 00              ??         00h
+        00300f8a 00              ??         00h
+        00300f8b 00              ??         00h
+        00300f8c 00              ??         00h
+        00300f8d 00              ??         00h
+        00300f8e 00              ??         00h
+        00300f8f 00              ??         00h
+        00300f90 00              ??         00h
+        00300f91 00              ??         00h
+        00300f92 00              ??         00h
+        00300f93 00              ??         00h
+        00300f94 00              ??         00h
+        00300f95 00              ??         00h
+        00300f96 00              ??         00h
+        00300f97 00              ??         00h
+        00300f98 00              ??         00h
+        00300f99 00              ??         00h
+        00300f9a 00              ??         00h
+        00300f9b 00              ??         00h
+        00300f9c 00              ??         00h
+        00300f9d 00              ??         00h
+        00300f9e 00              ??         00h
+        00300f9f 00              ??         00h
+        00300fa0 00              ??         00h
+        00300fa1 00              ??         00h
+        00300fa2 00              ??         00h
+        00300fa3 00              ??         00h
+        00300fa4 00              ??         00h
+        00300fa5 00              ??         00h
+        00300fa6 00              ??         00h
+        00300fa7 00              ??         00h
+        00300fa8 00              ??         00h
+        00300fa9 00              ??         00h
+        00300faa 00              ??         00h
+        00300fab 00              ??         00h
+        00300fac 00              ??         00h
+        00300fad 00              ??         00h
+        00300fae 00              ??         00h
+        00300faf 00              ??         00h
+        00300fb0 00              ??         00h
+        00300fb1 00              ??         00h
+        00300fb2 00              ??         00h
+        00300fb3 00              ??         00h
+        00300fb4 00              ??         00h
+        00300fb5 00              ??         00h
+        00300fb6 00              ??         00h
+        00300fb7 00              ??         00h
+                             //
+                             // .got 
+                             // SHT_PROGBITS  [0x200fb8 - 0x200fff]
+                             // ram:00300fb8-ram:00300fff
+                             //
+                             __DT_PLTGOT                                     XREF[2]:     00300ea0(*), 
+                             _GLOBAL_OFFSET_TABLE_                                        _elfSectionHeaders::00000590(*)  
+        00300fb8 c8 0d 20        addr       00200dc8
+                 00 00 00 
+                 00 00
+                             PTR_00300fc0                                    XREF[1]:     FUN_00100500:00100500(R)  
+        00300fc0 00 00 00        addr       00000000
+                 00 00 00 
+                 00 00
+                             PTR_00300fc8                                    XREF[1]:     FUN_00100500:00100506  
+        00300fc8 00 00 00        addr       00000000
+                 00 00 00 
+                 00 00
+                             PTR_puts_00300fd0                               XREF[1]:     puts:00100510  
+        00300fd0 08 20 30        addr       puts                                             = ??
+                 00 00 00 
+                 00 00
+                             PTR__ITM_deregisterTMCloneTable_00300fd8        XREF[1]:     deregister_tm_clones:00100577(R)  
+        00300fd8 00 20 30        addr       _ITM_deregisterTMCloneTable                      = ??
+                 00 00 00 
+                 00 00
+                             PTR___libc_start_main_00300fe0                  XREF[1]:     _start:00100554  
+        00300fe0 10 20 30        addr       __libc_start_main                                = ??
+                 00 00 00 
+                 00 00
+                             PTR___gmon_start___00300fe8                     XREF[1]:     _init:001004ec(R)  
+        00300fe8 18 20 30        addr       __gmon_start__                                   = ??
+                 00 00 00 
+                 00 00
+                             PTR__ITM_registerTMCloneTable_00300ff0          XREF[1]:     register_tm_clones:001005c8(R)  
+        00300ff0 20 20 30        addr       _ITM_registerTMCloneTable                        = ??
+                 00 00 00 
+                 00 00
+                             PTR___cxa_finalize_00300ff8                     XREF[2]:     __cxa_finalize:00100520, 
+                                                                                          __do_global_dtors_aux:001005f9(R
+        00300ff8 28 20 30        addr       __cxa_finalize                                   = ??
+                 00 00 00 
+                 00 00
+                             //
+                             // .data 
+                             // SHT_PROGBITS  [0x201000 - 0x20100f]
+                             // ram:00301000-ram:0030100f
+                             //
+                             __data_start                                    XREF[2]:     Entry Point(*), 
+                             data_start                                                   _elfSectionHeaders::000005d0(*)  
+        00301000 00              ??         00h
+        00301001 00              ??         00h
+        00301002 00              ??         00h
+        00301003 00              ??         00h
+        00301004 00              ??         00h
+        00301005 00              ??         00h
+        00301006 00              ??         00h
+        00301007 00              ??         00h
+                             __dso_handle                                    XREF[3]:     Entry Point(*), 
+                                                                                          __do_global_dtors_aux:00100607(R
+                                                                                          00301008(*)  
+        00301008 08 10 30        addr       __dso_handle                                     = 00301008
+                 00 00 00 
+                 00 00
+                             //
+                             // .bss 
+                             // SHT_NOBITS  [0x201010 - 0x201017]
+                             // ram:00301010-ram:00301017
+                             //
+                             _edata                                          XREF[8]:     Entry Point(*), 
+                             __bss_start                                                  deregister_tm_clones:00100560(*), 
+                             __TMC_END__                                                  deregister_tm_clones:00100568(*), 
+                             completed.7697                                               register_tm_clones:001005a0(*), 
+                                                                                          register_tm_clones:001005a7(*), 
+                                                                                          __do_global_dtors_aux:001005f0(R
+                                                                                          __do_global_dtors_aux:00100618(W
+                                                                                          _elfSectionHeaders::00000610(*)  
+        00301010                 undefined1 ??
+        00301011                 ??         ??
+        00301012                 ??         ??
+        00301013                 ??         ??
+        00301014                 ??         ??
+        00301015                 ??         ??
+        00301016                 ??         ??
+        00301017                 ??         ??
+                             //
+                             // EXTERNAL 
+                             // NOTE: This block is artificial and is used to make relocat
+                             // ram:00302000-ram:0030202f
+                             //
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk undefined _ITM_deregisterTMCloneTable()
+                               Thunked-Function: <EXTERNAL>::_ITM_deregi
+             undefined         AL:1           <RETURN>
+                             _ITM_deregisterTMCloneTable                     XREF[3]:     deregister_tm_clones:00100577(*), 
+                                                                                          deregister_tm_clones:00100584(c), 
+                                                                                          00300fd8(*)  
+        00302000                 ??         ??
+        00302001                 ??         ??
+        00302002                 ??         ??
+        00302003                 ??         ??
+        00302004                 ??         ??
+        00302005                 ??         ??
+        00302006                 ??         ??
+        00302007                 ??         ??
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk int puts(char * __s)
+                               Thunked-Function: <EXTERNAL>::puts
+             int               EAX:4          <RETURN>
+             char *            RDI:8          __s
+                             puts@@GLIBC_2.2.5
+                             puts                                            XREF[2]:     puts:00100510(T), 
+                                                                                          puts:00100510(c), 00300fd0(*)  
+        00302008                 ??         ??
+        00302009                 ??         ??
+        0030200a                 ??         ??
+        0030200b                 ??         ??
+        0030200c                 ??         ??
+        0030200d                 ??         ??
+        0030200e                 ??         ??
+        0030200f                 ??         ??
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk undefined __libc_start_main()
+                               Thunked-Function: <EXTERNAL>::__libc_star
+             undefined         AL:1           <RETURN>
+                             __libc_start_main@@GLIBC_2.2.5
+                             __libc_start_main                               XREF[2]:     _start:00100554(c), 00300fe0(*)  
+        00302010                 ??         ??
+        00302011                 ??         ??
+        00302012                 ??         ??
+        00302013                 ??         ??
+        00302014                 ??         ??
+        00302015                 ??         ??
+        00302016                 ??         ??
+        00302017                 ??         ??
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk undefined __gmon_start__()
+                               Thunked-Function: <EXTERNAL>::__gmon_star
+             undefined         AL:1           <RETURN>
+                             __gmon_start__                                  XREF[3]:     _init:001004ec(*), 
+                                                                                          _init:001004f8(c), 00300fe8(*)  
+        00302018                 ??         ??
+        00302019                 ??         ??
+        0030201a                 ??         ??
+        0030201b                 ??         ??
+        0030201c                 ??         ??
+        0030201d                 ??         ??
+        0030201e                 ??         ??
+        0030201f                 ??         ??
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk undefined _ITM_registerTMCloneTable()
+                               Thunked-Function: <EXTERNAL>::_ITM_regist
+             undefined         AL:1           <RETURN>
+                             _ITM_registerTMCloneTable                       XREF[3]:     register_tm_clones:001005c8(*), 
+                                                                                          register_tm_clones:001005d5(c), 
+                                                                                          00300ff0(*)  
+        00302020                 ??         ??
+        00302021                 ??         ??
+        00302022                 ??         ??
+        00302023                 ??         ??
+        00302024                 ??         ??
+        00302025                 ??         ??
+        00302026                 ??         ??
+        00302027                 ??         ??
+                             **************************************************************
+                             *                       THUNK FUNCTION                       *
+                             **************************************************************
+                             thunk undefined __cxa_finalize()
+                               Thunked-Function: <EXTERNAL>::__cxa_final
+             undefined         AL:1           <RETURN>
+                             __cxa_finalize@@GLIBC_2.2.5
+                             __cxa_finalize                                  XREF[2]:     __cxa_finalize:00100520(T), 
+                                                                                          __cxa_finalize:00100520(c), 
+                                                                                          00300ff8(*)  
+        00302028                 ??         ??
+        00302029                 ??         ??
+        0030202a                 ??         ??
+        0030202b                 ??         ??
+        0030202c                 ??         ??
+        0030202d                 ??         ??
+        0030202e                 ??         ??
+        0030202f                 ??         ??
+                             //
+                             // .comment 
+                             // SHT_PROGBITS [not-loaded]
+                             // .comment::00000000-.comment::0000002a
+                             //
+             assume DF = <UNKNOWN>
+                             s_GCC:_(Ubuntu_7.4.0-1ubuntu1~18.0_.comment__0  XREF[1]:     _elfSectionHeaders::00000650(*)  
+     t::00000000 47 43 43        ds         "GCC: (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0"
+                 3a 20 28 
+                 55 62 75 
+                             //
+                             // .shstrtab 
+                             // SHT_STRTAB [not-loaded]
+                             // .shstrtab::00000000-.shstrtab::000000fd
+                             //
+                             DAT_.shstrtab__00000000                         XREF[1]:     _elfSectionHeaders::00000710(*)  
+     b::00000000 00              ??         00h
+     b::00000001 2e 73 79        ds         ".symtab"
+                 6d 74 61 
+                 62 00
+     b::00000009 2e 73 74        ds         ".strtab"
+                 72 74 61 
+                 62 00
+     b::00000011 2e 73 68        ds         ".shstrtab"
+                 73 74 72 
+                 74 61 62 00
+     b::0000001b 2e 69 6e        ds         ".interp"
+                 74 65 72 
+                 70 00
+     b::00000023 2e 6e 6f        ds         ".note.ABI-tag"
+                 74 65 2e 
+                 41 42 49 
+     b::00000031 2e 6e 6f        ds         ".note.gnu.build-id"
+                 74 65 2e 
+                 67 6e 75 
+     b::00000044 2e 67 6e        ds         ".gnu.hash"
+                 75 2e 68 
+                 61 73 68 00
+     b::0000004e 2e 64 79        ds         ".dynsym"
+                 6e 73 79 
+                 6d 00
+     b::00000056 2e 64 79        ds         ".dynstr"
+                 6e 73 74 
+                 72 00
+     b::0000005e 2e 67 6e        ds         ".gnu.version"
+                 75 2e 76 
+                 65 72 73 
+     b::0000006b 2e 67 6e        ds         ".gnu.version_r"
+                 75 2e 76 
+                 65 72 73 
+     b::0000007a 2e 72 65        ds         ".rela.dyn"
+                 6c 61 2e 
+                 64 79 6e 00
+     b::00000084 2e 72 65        ds         ".rela.plt"
+                 6c 61 2e 
+                 70 6c 74 00
+     b::0000008e 2e 69 6e        ds         ".init"
+                 69 74 00
+     b::00000094 2e 70 6c        ds         ".plt.got"
+                 74 2e 67 
+                 6f 74 00
+     b::0000009d 2e 74 65        ds         ".text"
+                 78 74 00
+     b::000000a3 2e 66 69        ds         ".fini"
+                 6e 69 00
+     b::000000a9 2e 72 6f        ds         ".rodata"
+                 64 61 74 
+                 61 00
+     b::000000b1 2e 65 68        ds         ".eh_frame_hdr"
+                 5f 66 72 
+                 61 6d 65 
+     b::000000bf 2e 65 68        ds         ".eh_frame"
+                 5f 66 72 
+                 61 6d 65 00
+     b::000000c9 2e 69 6e        ds         ".init_array"
+                 69 74 5f 
+                 61 72 72 
+     b::000000d5 2e 66 69        ds         ".fini_array"
+                 6e 69 5f 
+                 61 72 72 
+     b::000000e1 2e 64 79        ds         ".dynamic"
+                 6e 61 6d 
+                 69 63 00
+     b::000000ea 2e 64 61        ds         ".data"
+                 74 61 00
+     b::000000f0 2e 62 73        ds         ".bss"
+                 73 00
+     b::000000f5 2e 63 6f        ds         ".comment"
+                 6d 6d 65 
+                 6e 74 00
+                             //
+                             // .strtab 
+                             // SHT_STRTAB [not-loaded]
+                             // .strtab::00000000-.strtab::00000200
+                             //
+                             DAT_.strtab__00000000                           XREF[1]:     _elfSectionHeaders::000006d0(*)  
+     b::00000000 00              ??         00h
+     b::00000001 63 72 74        ds         "crtstuff.c"
+                 73 74 75 
+                 66 66 2e 
+     b::0000000c 64 65 72        ds         "deregister_tm_clones"
+                 65 67 69 
+                 73 74 65 
+     b::00000021 5f 5f 64        ds         "__do_global_dtors_aux"
+                 6f 5f 67 
+                 6c 6f 62 
+     b::00000037 63 6f 6d        ds         "completed.7697"
+                 70 6c 65 
+                 74 65 64 
+     b::00000046 5f 5f 64        ds         "__do_global_dtors_aux_fini_array_entry"
+                 6f 5f 67 
+                 6c 6f 62 
+     b::0000006d 66 72 61        ds         "frame_dummy"
+                 6d 65 5f 
+                 64 75 6d 
+     b::00000079 5f 5f 66        ds         "__frame_dummy_init_array_entry"
+                 72 61 6d 
+                 65 5f 64 
+     b::00000098 70 31 63        ds         "p1c.c"
+                 2e 63 00
+     b::0000009e 5f 5f 46        ds         "__FRAME_END__"
+                 52 41 4d 
+                 45 5f 45 
+     b::000000ac 5f 5f 69        ds         "__init_array_end"
+                 6e 69 74 
+                 5f 61 72 
+     b::000000bd 5f 44 59        ds         "_DYNAMIC"
+                 4e 41 4d 
+                 49 43 00
+     b::000000c6 5f 5f 69        ds         "__init_array_start"
+                 6e 69 74 
+                 5f 61 72 
+     b::000000d9 5f 5f 47        ds         "__GNU_EH_FRAME_HDR"
+                 4e 55 5f 
+                 45 48 5f 
+     b::000000ec 5f 47 4c        ds         "_GLOBAL_OFFSET_TABLE_"
+                 4f 42 41 
+                 4c 5f 4f 
+     b::00000102 5f 5f 6c        ds         "__libc_csu_fini"
+                 69 62 63 
+                 5f 63 73 
+     b::00000112 5f 49 54        ds         "_ITM_deregisterTMCloneTable"
+                 4d 5f 64 
+                 65 72 65 
+     b::0000012e 70 75 74        ds         "puts@@GLIBC_2.2.5"
+                 73 40 40 
+                 47 4c 49 
+     b::00000140 5f 65 64        ds         "_edata"
+                 61 74 61 00
+     b::00000147 5f 5f 6c        ds         "__libc_start_main@@GLIBC_2.2.5"
+                 69 62 63 
+                 5f 73 74 
+     b::00000166 5f 5f 64        ds         "__data_start"
+                 61 74 61 
+                 5f 73 74 
+     b::00000173 5f 5f 67        ds         "__gmon_start__"
+                 6d 6f 6e 
+                 5f 73 74 
+     b::00000182 5f 5f 64        ds         "__dso_handle"
+                 73 6f 5f 
+                 68 61 6e 
+     b::0000018f 5f 49 4f        ds         "_IO_stdin_used"
+                 5f 73 74 
+                 64 69 6e 
+     b::0000019e 5f 5f 6c        ds         "__libc_csu_init"
+                 69 62 63 
+                 5f 63 73 
+     b::000001ae 5f 5f 62        ds         "__bss_start"
+                 73 73 5f 
+                 73 74 61 
+     b::000001ba 6d 61 69        ds         "main"
+                 6e 00
+     b::000001bf 5f 5f 54        ds         "__TMC_END__"
+                 4d 43 5f 
+                 45 4e 44 
+     b::000001cb 5f 49 54        ds         "_ITM_registerTMCloneTable"
+                 4d 5f 72 
+                 65 67 69 
+     b::000001e5 5f 5f 63        ds         "__cxa_finalize@@GLIBC_2.2.5"
+                 78 61 5f 
+                 66 69 6e 
+                             //
+                             // .symtab 
+                             // SHT_SYMTAB [not-loaded]
+                             // .symtab::00000000-.symtab::000005e7
+                             //
+                             Elf64_Sym_ARRAY_.symtab__00000000               XREF[1]:     _elfSectionHeaders::00000690(*)  
+     b::00000000 00 00 00        Elf64_Sy
+                 00 00 00 
+                 00 00 00 
+                             //
+                             // _elfSectionHeaders 
+                             // Elf Section Headers
+                             // _elfSectionHeaders::00000000-_elfSectionHeaders::0000073f
+                             //
+                             Elf64_Shdr_ARRAY__elfSectionHeaders__00000000   XREF[1]:     00100028(*)  
+     s::00000000 00 00 00        Elf64_Sh                                                    SECTION0 - SHT_NULL
+                 00 00 00 
+                 00 00 00 
+
