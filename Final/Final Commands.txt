@@ -1,0 +1,21 @@
+sudo ramses/tools/msys_detect.py |tee msysConfig.log
+
+m0N0.msys
+
+m0P0.msys
+
+sudo profile/profile 256m m0N0.msys |tee profile256m0N0.log
+
+sudo profile/profile 256m m0P0.msys |tee profile256m0P0.log
+
+sudo py/dem_exploit.py profile256m0N0.log m0N0.msys |tee dem-m0N0.log
+
+sudo py/dem_exploit.py profile256m0P0.log m0P0.msys |tee dem-m0P0.log
+
+sudo py/ffs_exploit.py profile256m0N0.log m0N0.msys |tee ffs-m0N0.log
+
+sudo py/ffs_exploit.py profile256m0P0.log m0P0.msys |tee ffs-m0P0.log
+
+sudo py/x86pte_exploits.py profile256m0N0.log m0N0.msys |tee x86-m0N0.log
+
+sudo py/x86pte_exploits.py profile256m0P0.log m0P0.msys |tee x86-m0P0.log
