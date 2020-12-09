@@ -1,0 +1,10 @@
+Select memory controller:
+	0. naive:ddr3
+	1. naive:ddr4
+	2. intel:sandy
+	3. intel:ivyhaswell
+Choice: Enable address pin mirroring for second rank? [y/N]: Select additional on-DIMM remap (if unsure, select 'none'):
+	0. None
+	1. rasxor:bit=3:mask=6
+	2. custom rasxor
+Choice [0]: Path to write output to [./mem.msys]: 

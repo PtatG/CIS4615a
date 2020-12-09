@@ -1,0 +1,14 @@
+ClearNX
+1296 total attacks (over 10368 KiB), of which 0 successful (  0.0 %)
+0 exploitable pages found
+
+SetRW
+1296 total attacks (over 10368 KiB), of which 0 successful (  0.0 %)
+0 exploitable pages found
+
+SetUS
+1296 total attacks (over 10368 KiB), of which 0 successful (  0.0 %)
+0 exploitable pages found
+
+FlipPFN
+Skipped, requires MEM_GB argument
